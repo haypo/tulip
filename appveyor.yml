@@ -1,0 +1,20 @@
+version: build-{build}-{branch}
+
+environment:
+  matrix:
+    # http://www.appveyor.com/docs/installed-software#python lists available
+    # versions
+    - PYTHON: "C:\\Python27"
+    - PYTHON: "C:\\Python27-x64"
+
+install:
+  - "set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - python --version
+  - pip install tox wheel
+  - pip install -e .
+  - python setup.py bdist_wheel
+
+build: off
+
+test_script:
+  - python runtests.py

@@ -10,11 +10,14 @@ environment:
 install:
   - "set PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - python --version
-  - pip install tox wheel
+  - pip install wheel aiotest futures mock six unittest2
   - pip install -e .
-  - python setup.py bdist_wheel
 
-build: off
+build_script:
+  - python setup.py bdist_wheel
 
 test_script:
   - python runtests.py
+
+artifacts:
+  - path: dist/*.whl

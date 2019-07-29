@@ -56,18 +56,18 @@ if sys.version_info < (3,):
 
 install_options = {
     "name": "trollius",
-    "version": "2.1.post1",
+    "version": "2.1.post2",
     "license": "Apache License 2.0",
     "author": 'Victor Stinner',
     "author_email": 'victor.stinner@gmail.com',
 
     "description": "Port of the Tulip project (asyncio module, PEP 3156) on Python 2",
     "long_description": long_description,
-    "url": "https://github.com/haypo/trollius",
+    "url": "https://github.com/jamadden/trollius",
 
     "classifiers": [
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 2.7",
         "License :: OSI Approved :: Apache Software License",
     ],
 
@@ -75,6 +75,8 @@ install_options = {
     "test_suite": "runtests.runtests",
 
     "ext_modules": extensions,
+    "zip_safe": False,
+    "keywords": "unmaintained deprecated",
 }
 if SETUPTOOLS:
     install_options['install_requires'] = requirements

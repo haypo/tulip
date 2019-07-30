@@ -59,6 +59,7 @@ install_options = {
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
+        "Development Status :: 7 - Inactive",
     ],
 
     "packages": ["trollius"],
